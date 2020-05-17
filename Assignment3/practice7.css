@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+.main{
+    margin-top: 50px;
+}
+
+
+
+.hoverimage{
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url(/card_backward.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.hoverimage:hover{
+    background-image: url(/card_forward.jpg);
+    background-size: 200px 200px;
+}
