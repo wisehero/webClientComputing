@@ -1,0 +1,8 @@
+ul{
+    background-color: aliceblue;
+    padding-right: 10px;
+}
+
+li:hover{
+    background-color: green;
+}

@@ -1,0 +1,12 @@
+ul{
+    background-image: url(/animal2.jpg);
+    background-size: contain;
+}
+
+li{
+    color:blue;
+}
+
+li:hover{
+    background-color: green;
+}

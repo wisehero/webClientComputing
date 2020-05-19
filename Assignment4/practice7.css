@@ -1,0 +1,14 @@
+@keyframes widePicture{
+    from{transition: width ;}
+    to{transition: wid;}
+}
+
+img {
+    transition: width 5s;
+    width:200px;
+    height: 200px;
+}
+
+img:hover{
+    width: 100%;
+}
