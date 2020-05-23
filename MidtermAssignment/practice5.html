@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice5</title>
+</head>
+
+<body>
+    <h1>문자열 배열 다루기</h1>
+    <hr>
+    <script>
+        var names = new Array("wonsun", "jaemoonlee", "kitae", "gracehwang");
+        var max_length = 0
+        document.write("이름: " + names.join(' ') + "<br>");
+
+        //가장 긴 이름을 얻기
+        for (i = 0; i < 4; i++) {
+            if (names[i].length > max_length) {
+                max_length = names[i].length;
+                longest = names[i];
+            }
+        }
+        document.write("가장 긴 이름: " + longest + "<br>");
+        document.write("가장 먼저 나오는 이름: " + names.sort()[0] + "<br>");
+        document.write("증가순 이름: " + names.sort().join(' ') + "<br>");
+    </script>
+</body>
+
+</html>
