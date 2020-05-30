@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice1</title>
+    <script>
+      window.onload = function () {
+        var w;
+        document.getElementById("btn").onclick = function () {
+          w = open("time.html", "현재 시각은", "width=400, height = 300");
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <button type="button" id="btn">현재 시각 확인하기</button>
+  </body>
+</html>
