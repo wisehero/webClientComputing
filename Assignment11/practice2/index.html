@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice2</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>피자주문</h1>
+    <form name="order">
+      <fieldset>
+        <legend>사이즈</legend>
+        <p id="price">Large - 24000원</p>
+      </fieldset>
+      <fieldset id="addSomething">
+        <legend>추가 주문</legend>
+        <label for=""
+          ><input
+            type="checkbox"
+            name="add"
+            value="800"
+            onclick="check(this)"
+          />피클(800원)</label
+        >
+        <label for=""
+          ><input
+            type="checkbox"
+            name="add"
+            value="300"
+            onclick="check(this)"
+          />칠리 소스(300원)</label
+        >
+        <label for=""
+          ><input
+            type="checkbox"
+            name="add"
+            value="200"
+            onclick="check(this)"
+          />디핑 소스(200원)</label
+        >
+        <label for=""
+          ><input
+            type="checkbox"
+            name="add"
+            value="4800"
+            onclick="check(this)"
+          />치즈스틱(4개, 4800원)</label
+        >
+        <label for=""
+          ><input
+            type="checkbox"
+            name="add"
+            value="2400"
+            onclick="check(this)"
+          />콘 샐러드(2400원)</label
+        >
+      </fieldset>
+      <fieldset>
+        <legend>합계</legend>
+        <strong id="sum"></strong>
+      </fieldset>
+    </form>
+    <script src="app.js"></script>
+  </body>
+</html>
