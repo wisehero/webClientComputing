@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function radioChecked() {
+        var img = document.getElementById("bi");
+        var browser = document.getElementsByName("browser");
+        for (var i = 0; i < browser.length; i++) {
+          if (browser[i].checked == true) img.src = browser[i].value;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>라디오 버튼을 클릭하면 이미지를 출력합니다.</h1>
+    <hr />
+    <form>
+      <input
+        type="radio"
+        name="browser"
+        value="edge.png"
+        onclick="radioChecked()"
+        checked
+      />
+      엣지
+      <input
+        type="radio"
+        name="browser"
+        value="chrome.png"
+        onclick="radioChecked()"
+      />
+      크롬
+      <input
+        type="radio"
+        name="browser"
+        value="firefox.png"
+        onclick="radioChecked()"
+      />
+      파이어폭스
+      <input
+        type="radio"
+        name="browser"
+        value="whale.png"
+        onclick="radioChecked()"
+      />
+      웨일
+    </form>
+    <img id="bi" src="edge.png" alt="" />
+  </body>
+</html>
