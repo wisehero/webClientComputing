@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function wheel(e, img) {
+        if (e.wheelDelta > 0) {
+          img.width -= img.width * 0.05;
+          img.height -= img.height * 0.05;
+        } else {
+          img.width += img.width * 0.05;
+          img.height += img.height * 0.05;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>
+      이미지 위에 휠을 위로 굴리면 이미지가 축소되고 아래로 굴리면 이미지가
+      확대됩니다.
+    </p>
+    <img
+      src="/기말대비/기말고사정답/asset/수박.png"
+      onwheel="wheel(event, this)"
+      id="watermelon"
+      width="250"
+      height="210"
+    />
+  </body>
+</html>
