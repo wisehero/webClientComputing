@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <!-- 좋은 글귀를 배열에 저장해 두고 배열에 있는 내용 중 하나를 무작위로 화면에 표시하는 프로그램을 작성한다. -->
+    <script>
+      var quotes = [];
+      quotes[0] = "문장1";
+      quotes[1] = "문장2";
+      quotes[2] = "문장3";
+      quotes[3] = "문장4";
+      quotes[4] = "문장5";
+
+      var index = Math.floor(Math.random() * 5);
+      document.write("<p>&quot;" + quotes[index] + "&quot;</p>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var text = [
+        "HTML5, CSS3, Javascript를 다룹니다.",
+        "C++, JAVA를 다룹니다",
+        "데이터통신, 정보통신, 네트워크를 다룹니다",
+        "빅데이터, 머신러닝, 딥러닝을 다룹니다",
+      ];
+      var commentDiv;
+
+      function init() {
+        commentDiv = document.getElementById("commentDiv");
+        var liArray = document.getElementsByTagName("li");
+        for (i = 0; i < liArray.length; i++) {
+          liArray[i].addEventListener("mouseover", over);
+          liArray[i].addEventListener("mouseout", hideCommentDiv);
+        }
+      }
+
+      function over(e) {
+        var n = 0; // 텍스트의 인덱스를 정하는 변수
+        switch (e.target.id) {
+          case "10":
+            n = 0;
+            break;
+          case "11":
+            n = 1;
+            break;
+          case "12":
+            n = 2;
+            break;
+          case "13":
+            n = 3;
+            break;
+        }
+        setCommentDiv(text[n], e);
+      }
+
+      function setCommentDiv(comment, e) {
+        commentDiv.innerHTML = comment;
+        commentDiv.style.left = e.clientX + "px";
+        commentDiv.style.top = e.clientY + "px";
+        commentDiv.style.border = "1px solid yellowgreen";
+        commentDiv.style.background = "aliceblue";
+        commentDiv.style.visibility = "visible";
+        commentDiv.style.width = "200px";
+        commentDiv.style.height = "80px";
+      }
+
+      function hideCommentDiv() {
+        commentDiv.style.visibility = "hidden";
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <h3>아이템에 마우스를 올리면 설명 출력</h3>
+    <hr />
+    <p>수강과목</p>
+    <ul>
+      <li id="10">웹클</li>
+      <li id="11">객지프</li>
+      <li id="12">네트워크</li>
+      <li id="13">인공지능</li>
+    </ul>
+    <div id="commentDiv" style="position: absolute;"></div>
+  </body>
+</html>
